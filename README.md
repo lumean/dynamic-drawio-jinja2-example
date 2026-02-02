@@ -1,5 +1,7 @@
 # dynamic-drawio-jinja2-example
 
+> Live Version here: [gh pages dynamic-drawio-jinja2-example](https://lumean.github.io/dynamic-drawio-jinja2-example/)
+
 This is an example of how to use jinja2 templating in draw.io diagrams as a poor man's / low-code alternative to
 dynamically generating the svg/xml in as code. It is especially useful when people without
 deep programming skills need to maintain/update the diagrams.

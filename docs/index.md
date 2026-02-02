@@ -1,5 +1,7 @@
 # Diagram with Jinja2 Example
 
+Repository link: https://github.com/lumean/dynamic-drawio-jinja2-example/
+
 Before rendering:
 
 ![](template_assets/orig.drawio)
