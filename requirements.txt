@@ -1,0 +1,7 @@
+lxml>=6.0
+
+mkdocs>=1.6,<=1.7
+mkdocs-drawio>=1.13
+mkdocs-material>=9,<=10
+# https://github.com/mkdocs/mkdocs/issues/4032  auto refresh not working with click 8.3
+click >=7.0, <=8.2.1

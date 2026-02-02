@@ -1,0 +1,79 @@
+site_name: Example MkDocs with Drawio
+site_description: Example MkDocs with Drawio
+site_author: Manuel Widmer
+copyright: Copyright &copy; Nobody
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - content.code.copy
+    - toc.integrate
+  #custom_dir: docs/overrides
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: template_assets/example.png
+  favicon: template_assets/example.png
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - https://viewer.diagrams.net/js/viewer-static.min.js
+  - javascripts/drawio-reload.js
+plugins:
+  - drawio:
+      edit: false
+      darkmode: true
+      toolbar:          # Control the looks and behaviour of the toolbar
+        zoom: true      # Display the zoom control (data-toolbar-zoom)
+        pages: true     # Display the page selector (data-toolbar-pages)
+        layers: true     # Display the layers control (data-toolbar-layers)
+        lightbox: true   # Display the lightbox button (data-toolbar-lightbox)
+        no_hide: true    # Do not hide the toolbar when hovering over the diagram # (data-toolbar-nohide)
+        position: "top"  # Control the position of the toolbar (top or bottom) # (data-toolbar-position)
+        show_title: true
+
+  - search
+markdown_extensions:
+  - md_in_html
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Welcome:
+    - Welcome: index.md
+
